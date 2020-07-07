@@ -1,8 +1,11 @@
 @import url("https://use.typekit.net/oht1lqm.css");
 
-body {
+body,
+html {
     background-color: #f6f6ff;
-    overflow-y: hidden;
+    min-height: 100%;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 

@@ -1,5 +1,7 @@
 import Head from "next/head";
 import "../styles/index.scss";
+import styled from 'styled-components'
+
 
 import LandingPage from './Landing'
 export default function Home() {

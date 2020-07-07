@@ -1,4 +1,19 @@
-
+header {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    .circle {
+        position: absolute;
+        z-index: 1;
+        bottom: -20%;
+        right: 10vw;
+        background-color: #D82433;
+        background-color: #141414;
+        border-radius: 50%;
+        width: 750px;
+        height: 750px;
+    }
+}
 .title {
     fill: #141414;
     position: absolute;
@@ -98,27 +113,59 @@
         position: relative;
         color: #f6f6ff;
         z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        width: 250px;
+        transform: translateX(50%);
+
+        .start {
+            font-weight: 700;
+            position: relative;
+        }
         .end {
             font-weight: 700;
+            position: relative;
+            transform: translateX(100%);
+        }
+
+        .list-container {
+            position: relative;
+            transform: translateX(30%);
+            top: 0;
         }
 
         li:not(.end) {
             cursor: pointer;
             position: relative;
-            transform: translateX(50%);
+            transform: translateX(0);
+            display: inline-block;
+            width: 100%;
+            transition: .22s all ease-out;
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: 50%;
+                left: 0;
+                transform: translate(-200%,-50%);
+                width: 0px;
+                height: 2px;
+                background-color:#D82433;
+                transition: .27s all ease-in-out;
+            }
+
+            &:hover {
+                transform: translateX(10px);
+
+                &::before {
+                    width: 10px
+                }
+            }
         }
 
-        .circle {
-            position: absolute;
-            z-index: -1;
-            bottom: -200px;
-            left: -100px;
-            background-color: #D82433;
-            background-color: #141414;
-            border-radius: 50%;
-            width: 750px;
-            height: 750px;
-        }
+
     }
 }
 
@@ -130,7 +177,7 @@
     flex-direction: column;
     transform: translateY(-15%);
     span {
-        font-size: 600px;
+        font-size: 23.4vw;
         line-height: .65;
         font-family: acumin-pro-extra-condensed, sans-serif;
         text-transform: uppercase;
