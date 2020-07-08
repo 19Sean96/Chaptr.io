@@ -1,4 +1,8 @@
 @import url("https://use.typekit.net/oht1lqm.css");
+@import './util/grid';
+
+@import './layouts/home';
+@import './layouts/essay1';
 
 body,
 html {
@@ -15,7 +19,16 @@ html {
 }
 
 
-
+.red-square {
+    position: absolute;
+    z-index: 99999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: orangered;
+}
 
 
 
