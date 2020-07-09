@@ -1,0 +1,25 @@
+.red-blob {
+    fill: #d82433;
+    position: absolute;
+
+    &-1 {
+        width: 400px;
+        height: auto;
+        left: 0;
+        top: 0;
+
+        transform: translate(-25%,-10%) !important;
+    }
+}
+
+.crown {
+    position: absolute;
+    z-index: 500;
+    top:50%; left: 50%;
+    transform: translate(-100%,-75%);
+    width: 210px;
+
+    img {
+        width: 100%;
+    }
+}

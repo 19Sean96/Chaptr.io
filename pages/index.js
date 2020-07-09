@@ -3,14 +3,14 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import TitleSVG from "../assets/svg/chaptr-title.svg";
-import TitleShadowSVG from "../assets/svg/chaptr-title-shadow.svg";
+import TitleSVG from "../components/svg-components/ChapterTitle";
+import TitleShadowSVG from "../components/svg-components/ChapterTitleShadow";
 export default function App() {
   return (
     <header>
       <div className="title__container">
-        <TitleSVG className="title" />
-        <TitleShadowSVG className="title--shadow" />
+        <TitleSVG />
+        <TitleShadowSVG />
       </div>
 
       <div className="top-row">

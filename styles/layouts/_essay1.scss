@@ -7,19 +7,53 @@
     grid-column: 1/13;
     text-transform: uppercase;
     margin-top: 50px;
+    position: relative;
 
     &--title {
-        font-size: 22px;
+      font-size: 22px;
     }
+  }
+
+  &--title {
+    grid-column: 2/6;
+    grid-row: 2/3;
+    align-self: flex-end;
+    color: #110;
+    font-family: ambroise-francois-std, acumin-pro, serif !important;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14.8vw;
+
+    position: relative;
+    transform: translateY(-120px);
+    z-index: 500;
+  }
+
+  &--quote {
+    position: relative;
+    transform: scaleY(.75);
+    z-index: 500;
+    font-family: acumin-pro-extra-condensed, sans-serif;
+    font-weight: 400;
+    font-size: 4vw;
+    text-align: right;
+    font-style: italic;
+    line-height: .75;
+    grid-column: 4/8;
+    grid-row: 2/3;
+    text-transform: uppercase;
+    align-self: center;
+    justify-self: left;
+    color: #d82433;
   }
 }
 
 .profile {
-    width: 100%;
-    &__container {
-        position: absolute;
-        top: 0;
-        right: -35px;
-        width: 50%;
-    }
+  width: 100%;
+  &__container {
+    position: absolute;
+    top: 0;
+    right: -35px;
+    width: 50%;
+  }
 }
