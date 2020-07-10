@@ -8,9 +8,11 @@
     text-transform: uppercase;
     margin-top: 50px;
     position: relative;
+    pointer-events: none;
 
     &--title {
       font-size: 22px;
+
     }
   }
 
@@ -27,33 +29,165 @@
     position: relative;
     transform: translateY(-120px);
     z-index: 500;
+
   }
 
   &--quote {
     position: relative;
-    transform: scaleY(.75);
+    transform: scaleY(0.825);
     z-index: 500;
     font-family: acumin-pro-extra-condensed, sans-serif;
     font-weight: 400;
-    font-size: 4vw;
     text-align: right;
     font-style: italic;
-    line-height: .75;
-    grid-column: 4/8;
-    grid-row: 2/3;
+    line-height: 0.75;
     text-transform: uppercase;
-    align-self: center;
+    align-self: flex-end;
     justify-self: left;
     color: #d82433;
+    
+    &__1 {
+      grid-column: 4/8;
+      grid-row: 2/3;
+      font-size: 4vw;
+      margin-bottom: 80px;
+
+    }
+
+    &__2 {
+      grid-row: 4/5;
+      grid-column: 8/12;
+      font-size: 3.43vw;
+      justify-self: right;
+      color: #d82433;
+      a {
+        font-size: 2.3vw;
+        text-decoration: none;
+        opacity: .6;
+        color: inherit;
+        &:active {
+          color: inherit;
+        }
+
+      }
+    }
+
+    &__3 {
+      grid-row: 7/9;
+      grid-column: 2/6;
+      align-self: center;
+      font-size: 3.43vw;
+      justify-content: right;
+      text-align: left;
+      color: #d82433;
+
+      a {
+        font-size: 2.3vw;
+        text-decoration: none;
+        opacity: .6;
+        color: inherit;
+
+        &:active {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  &--par {
+    position: relative;
+    z-index: 500;
+    margin-top: 75px;
+
+    &__hook {
+      font-family: ambroise-francois-std, acumin-pro, serif !important;
+      font-weight: 700;
+      font-style: normal;
+      text-transform: capitalize;
+      font-size: 64px;
+    }
+
+    &__text {
+      font-family: ambroise-std, serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 32px;
+    }
+
+    &__1 {
+      grid-column: 2/6;
+      grid-row: 3/4;
+
+      p {
+        margin-left: 16px;
+      }
+    }
+
+    &__2 {
+      grid-column: 2/7;
+      grid-row: 4/6;
+    }
+
+    &__3 {
+      grid-column: 7/12;
+      grid-row: 5/6;
+    }
+
+    &__4 {
+      grid-column: 8/12;
+      grid-row: 7/9;
+      color: #eef
+    }
+  }
+
+  &--banner {
+    grid-column: 1/13;
+    grid-row: 8/10;
+    z-index: 500;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+
+    .wrapper {
+      grid-column: 2/5;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      img {
+        width: 36%;
+      }
+    }
+  }
+
+  &--comment {
+    color: #eef;
+    font-family: acumin-pro-extra-condensed, sans-serif;
+    font-weight: 400;
+    text-align: right;
+    font-style: italic;
+    font-size: 2.3vw;
+    line-height: 0.75;
+    text-transform: initial;
+    align-self: center;
+    justify-self: left;
+    &__1 {
+      grid-column: 7/12;
+      text-align: right;
+    }
   }
 }
 
 .profile {
-  width: 100%;
   &__container {
     position: absolute;
-    top: 0;
+    top: 0; z-index: 100;
     right: -35px;
     width: 50%;
+    height: 100vh;
+    background-image: url(/assets/img/basquiat.jpg);
+    background-size: cover;
+
   }
 }

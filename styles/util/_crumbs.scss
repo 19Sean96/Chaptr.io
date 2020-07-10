@@ -9,17 +9,65 @@
         top: 0;
 
         transform: translate(-25%,-10%) !important;
+
+        path {
+            transition: .2s all;
+        }
     }
+
+    &-2 {
+        min-width: 1100px;
+        width: 72vw;
+        height: auto;
+        top: 1100px;
+        right: 5%;
+        transform: translate(0,0)
+    }
+
+}
+
+.red-exclamation {
+    fill: #d82433;
+    position: absolute;
+
+    top: 57.8vh;
+    left: 3vw;
+    transform: scale(1.1) rotate(-10deg);
 }
 
 .crown {
     position: absolute;
     z-index: 500;
-    top:50%; left: 50%;
-    transform: translate(-100%,-75%);
-    width: 210px;
+    top:25vw; left: 50%;
+    transform: translate(-100%,0%);
+    width: 7.5vw;
 
     img {
         width: 100%;
+    }
+}
+
+.img--dustheads {
+    position: absolute;
+    top: 0;
+    left: -120px;
+    width: 47vw;
+    min-height: 40vw;
+    transform: translateY(-36%);
+    > defs path {
+        transition: 1.6s all;
+    }
+    #clip-path {
+        position: relative;
+        transform: scale(1) translate(0,0);
+        transition: .25s all;
+    
+    }
+
+    
+    > svg:hover {
+        #clip-path {
+            transform: scale(1.5) translate(-17.5%,-107%);
+        }
     }
 }

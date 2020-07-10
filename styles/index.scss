@@ -32,6 +32,26 @@ html {
     background-color: orangered;
 }
 
+// .content-wrapper {
+//     position: relative;
 
+//     &::after {
+//         content: '';
+//         position: absolute; z-index: 0;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 20px;
+//         background-color: maroon;
+//     }
+// }
 
+.black-bg {
+    // background-color: #001;
+    position: relative;
+    grid-column: 1/13;
+    grid-row: 6/15;
+    width: 100vw;
+    transform: translate(-36px, 5vw)
+}
 
