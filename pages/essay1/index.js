@@ -53,6 +53,24 @@ const Essay1 = () => {
           America and the treatment of black Americans.
         </p>
       </div>
+      <div className="essay--par essay--par__5">
+        <p className="essay--par__text">
+          An excellent example of this is his ‘83 work, Hollywood Africans. The
+          painting features words like “tax free”, “gangsterism” & “sugarcane”
+          (among others) and the viewer is forced to question what everything
+          means. Basquiat’s use of vivid color contrast & balance allows the
+          viewers’ eyes to dance around the painting, dissecting the crumbs of
+          information along the way - granting the curious person a unique
+          opportunity to form their own subjective, unique definition. With that
+          said, the title offers a hint as to the true meaning behind the
+          madness - in contrast to his numerous Untitled pieces.
+        </p>
+        <p className="essay--par__text">
+          Hollywood Africans is cryptic in how it approaches the black
+          community’s influence on pop-culture, and advertisement; a topic which
+          is still relevant in 2020.
+        </p>
+      </div>
       <blockquote
         className="essay--quote essay--quote__2"
         cite="https://www.telegraph.co.uk/culture/4707974/He-had-everything-but-talent.html"
@@ -86,6 +104,18 @@ const Essay1 = () => {
         <DustheadsImageMasked />
         <RedBlob2 num="2" />
       </div>
+      <div className="red-bg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1921.121 2694.496"
+        >
+          <path
+            className="red-bg--svg"
+            d="M4.536-375.763s862.04,206.069,1357.956,43.109c305.482-100.382,475.181-89.368,561.9-66.1.041,51.992,2.4,70.2.019,2678.714L4.353,2279.953Z"
+            transform="translate(-4.353 414.531)"
+          />
+        </svg>
+      </div>
       <blockquote
         className="essay--quote essay--quote__3"
         cite="https://www.telegraph.co.uk/culture/4707974/He-had-everything-but-talent.html"
@@ -116,34 +146,13 @@ const Essay1 = () => {
           2020.
         </h3>
       </div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
-      <div className="blue-square"></div>
+      <div className="painting-hwa">
+        <img
+          src="/assets/img/hollywood-africans@2x.jpg"
+          alt="Hollywood Africans"
+        />
+      </div>
+
     </div>
   );
 };

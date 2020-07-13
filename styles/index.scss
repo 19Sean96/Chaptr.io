@@ -50,8 +50,23 @@ html {
     // background-color: #001;
     position: relative;
     grid-column: 1/13;
-    grid-row: 6/15;
+    grid-row: 6/14;
     width: 100vw;
     transform: translate(-36px, 5vw)
 }
 
+.red-bg {
+    position: relative;
+    grid-column: 1/13;
+    grid-row: 10/15;
+    width: 100vw;
+    transform: translate(-36px, 5vw);
+    height: 1000px;
+    overflow: hidden;
+    align-self: end;
+    &--svg {
+        fill: #d82433;
+
+    }
+
+}
