@@ -1,73 +1,97 @@
 .red-blob {
-    fill: #d82433;
-    position: absolute;
+  fill: #d82433;
+  position: absolute;
 
-    &-1 {
-        width: 400px;
-        height: auto;
-        left: 0;
-        top: 0;
+  &-1 {
+    width: 400px;
+    height: auto;
+    left: 100px;
+    top: 100px;
+    overflow: visible;
+    transform: translate(-25%, -10%) !important;
 
-        transform: translate(-25%,-10%) !important;
+    path {
+      position: absolute;
+      transition: 0.2s all;
 
-        path {
-            transition: .2s all;
+      transform: skew(0, 0) translate(0,-20vw);
+      transform-origin: center center;
+      animation: blobMove 15s ease-in-out infinite forwards;
+  
+      @keyframes blobMove {
+        from {
+          transform: skew(-25deg, 35deg) translate(0,-25vw);
         }
+  
+        to {
+          transform: skew(45deg, -20deg) translate(-50vw,180vw);
+        }
+      }
     }
 
-    &-2 {
-        min-width: 1100px;
-        width: 72vw;
-        height: auto;
-        top: 750px;
-        right: 5%;
-        transform: translate(0,0)
-    }
 
+  }
+
+  &-2 {
+    // min-width: 1100px;
+    width: 72vw;
+    height: auto;
+    top: 0;
+    right: 5%;
+    transform: translate(0, -5%);
+
+    @media screen and (max-width: 1300px) {
+       width: 63vw; 
+    }
+  }
 }
 
 .red-exclamation {
-    fill: #d82433;
-    position: absolute;
+  fill: #d82433;
+  position: absolute;
 
-    top: 57.8vh;
-    left: 3vw;
-    transform: scale(1.1) rotate(-10deg);
+  top: 57.8vh;
+  left: 3vw;
+  transform: scale(1.1) rotate(-10deg);
+  filter: url(#blurMe);
 }
 
-.crown {
-    position: absolute;
-    z-index: 500;
-    top:25vw; left: 50%;
-    transform: translate(-100%,0%);
-    width: 7.5vw;
+.crown-1 {
+  position: absolute;
+  z-index: 500;
+  top: 35vw;
+  left: 50%;
+  transform: translate(-100%, 0%);
+  width: 175px;
 
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
 
 .img--dustheads {
-    position: absolute;
-    top: 0;
-    left: -120px;
-    width: 47vw;
-    min-height: 40vw;
-    transform: translateY(-36%);
-    > defs path {
-        transition: 1.6s all;
-    }
-    #clip-path {
-        position: relative;
-        transform: scale(1) translate(0,0);
-        transition: .25s all;
-    
-    }
+  position: absolute;
+  top: 0;
+  left: -120px;
+  width: 47vw;
+  min-height: 40vw;
+  transform: translateY(-45%);
+  > defs path {
+    transition: 1.6s all;
+  }
+  #clip-path {
+    position: relative;
+    transform: scale(1) translate(0, 0);
+    transition: 0.25s all;
+  }
 
-    
-    > svg:hover {
-        #clip-path {
-            transform: scale(1.5) translate(-17.5%,-107%);
-        }
+  > svg:hover {
+    #clip-path {
+      transform: scale(1.5) translate(-17.5%, -107%);
     }
+  }
+
+  @media screen and (max-width: 1200px) {
+      left: -60px;
+  }
 }

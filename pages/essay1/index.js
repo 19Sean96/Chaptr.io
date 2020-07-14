@@ -1,10 +1,18 @@
 import Link from "next/link";
+import { useRef, useState, useEffect } from "react";
 import RedBlob1 from "../../components/svg-components/RedBlob1";
 import RedBlob2 from "../../components/svg-components/RedBlob2";
 
 import RedExclamation from "../../components/svg-components/RedExclamation";
 import DustheadsImageMasked from "../../components/svg-components/DustheadsImageMasked";
 const Essay1 = () => {
+  const handleScroll = (e) => {
+    console.log(`Output from e.target: ${e.target.scrollTop}`);
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, true);
+    return () => window.removeEventListener("scroll", handleScroll, true);
+  });
   return (
     <div className="essay grid">
       <RedBlob1 num="1" />
@@ -18,7 +26,7 @@ const Essay1 = () => {
         <p>"i am not a real person.</p>
         <p>i am a legend."</p>
       </blockquote>
-      <div className="crown">
+      <div className="crown-1">
         <img src="/assets/img/crown@2x.png" alt="crown" />
       </div>
       <div className="essay--par essay--par__1">
@@ -53,6 +61,15 @@ const Essay1 = () => {
           America and the treatment of black Americans.
         </p>
       </div>
+      <div className="essay--par essay--par__4">
+        <p className="essay--par__text">
+          Basquiat’s art may seem cluttered or random to the untrained eye, with
+          strange patterns, words, and icons seemingly being incoherently
+          scattered on the canvas. With closer inspection, you’ll find an
+          amalgamation of thoughtful abstractions being loosely tied together to
+          hint at a deeper exegesis on how Basquiat views the world around him.
+        </p>
+      </div>
       <div className="essay--par essay--par__5">
         <p className="essay--par__text">
           An excellent example of this is his ‘83 work, Hollywood Africans. The
@@ -71,6 +88,21 @@ const Essay1 = () => {
           is still relevant in 2020.
         </p>
       </div>
+      <div className="essay--par essay--par__6">
+        <p className="essay--par__text">
+          His unique style and celebrity status has placed him among some of the
+          most revolutionary artists of the 20th century. Much like Picasso with
+          his Cubism & Salvador Dali with his Surrealism, Basquiat will be
+          remembered for his Neo-Expressionism. His influence on street art,
+          post-modernism & social commentary is undeniable; and his style,
+          inimitable.
+        </p>
+        <p className="essay--par__text">
+          Tragically, his art career ended at 27 when he died of a heroin
+          overdose. One can’t help but think how his art could have evolved
+          through time.
+        </p>
+      </div>
       <blockquote
         className="essay--quote essay--quote__2"
         cite="https://www.telegraph.co.uk/culture/4707974/He-had-everything-but-talent.html"
@@ -84,15 +116,6 @@ const Essay1 = () => {
           <cite>The Telegraph</cite>
         </a>
       </blockquote>
-      <div className="essay--par essay--par__4">
-        <p className="essay--par__text">
-          Basquiat’s art may seem cluttered or random to the untrained eye, with
-          strange patterns, words, and icons seemingly being incoherently
-          scattered on the canvas. With closer inspection, you’ll find an
-          amalgamation of thoughtful abstractions being loosely tied together to
-          hint at a deeper exegesis on how Basquiat views the world around him.
-        </p>
-      </div>
       <div className="black-bg">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1921.121 2694.496">
           <path
@@ -105,10 +128,7 @@ const Essay1 = () => {
         <RedBlob2 num="2" />
       </div>
       <div className="red-bg">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1921.121 2694.496"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1921.121 2694.496">
           <path
             className="red-bg--svg"
             d="M4.536-375.763s862.04,206.069,1357.956,43.109c305.482-100.382,475.181-89.368,561.9-66.1.041,51.992,2.4,70.2.019,2678.714L4.353,2279.953Z"
@@ -152,7 +172,15 @@ const Essay1 = () => {
           alt="Hollywood Africans"
         />
       </div>
-
+      <footer className="footer">
+        <div className="footer-crown">
+          <img src="/assets/img/crown@2x.png" alt="crown" />
+        </div>
+        <div className="footer--text__wrapper">
+          <p className="footer--text">jean-michel basquiat</p>
+          <p className="footer--text">12/22/1960-8/12/1988</p>
+        </div>
+      </footer>
     </div>
   );
 };

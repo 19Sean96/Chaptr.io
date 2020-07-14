@@ -9,9 +9,13 @@
 body,
 html {
     background-color: #f6f6ff;
-    min-height: 100%;
+    height: 100%;
     overflow-x: hidden;
     width: 100vw;
+}
+
+html {
+    overflow-y: hidden;
 }
 
 
@@ -47,23 +51,24 @@ html {
 // }
 
 .black-bg {
-    // background-color: #001;
     position: relative;
     grid-column: 1/13;
     grid-row: 6/14;
-    width: 100vw;
-    transform: translate(-36px, 5vw)
+    width: 115vw;
+    transform: translate(-5vw, 5vw);
+
+    svg {
+        height: 100%;
+    }
 }
 
 .red-bg {
-    position: relative;
-    grid-column: 1/13;
-    grid-row: 10/15;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100vw;
-    transform: translate(-36px, 5vw);
+    transform: translate(0, 5vw) scale(-1,1);
     height: 1000px;
-    overflow: hidden;
-    align-self: end;
     &--svg {
         fill: #d82433;
 
